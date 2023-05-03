@@ -20,7 +20,7 @@ body {
   cursor: pointer;
   padding: 0;
 }
-.dropdown > .link:focus,
+.dropdown.active > .link,
 .link:hover {
   color: black;
 }
@@ -43,8 +43,24 @@ body {
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
-.dropdown > .link:focus + .dropdown-menu {
+.dropdown.active > .link + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.login-form > input {
+  margin-bottom: 0.5rem;
 }
